@@ -1,0 +1,6 @@
+{
+  "name": "VELOOP Rewards Vault & Exchange Center",
+  "description": "Exchange platform Gems into official VE coins, manage loyalty vault balances, complete reward quests, and redeem digital perks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

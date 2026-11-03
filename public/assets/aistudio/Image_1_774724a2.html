@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed-variant":"#5a00c6","on-primary-container":"#624700","primary-container":"#e5b54f","tertiary":"#d3d6fc","surface":"#101221","on-tertiary-fixed":"#151936","error":"#ffb4ab","primary":"#ffd277","tertiary-container":"#b7badf","error-container":"#93000a","outline":"#9b8f7d","secondary-container":"#5c03cb","on-tertiary-container":"#464a69","surface-container-highest":"#323444","background":"#101221","surface-dim":"#101221","outline-variant":"#4e4636","inverse-on-surface":"#2d2f3f","surface-variant":"#323444","surface-container-low":"#191b2a","secondary-fixed":"#eaddff","on-primary":"#402d00","on-primary-fixed":"#261900","tertiary-fixed-dim":"#c1c4e9","on-secondary":"#3e008e","on-error-container":"#ffdad6","surface-container-high":"#272939","surface-tint":"#f0bf58","on-tertiary":"#2a2e4c","inverse-primary":"#7a5900","surface-container":"#1d1f2e","primary-fixed-dim":"#f0bf58","on-tertiary-fixed-variant":"#414564","surface-container-lowest":"#0b0d1c","on-secondary-container":"#c6aaff","on-background":"#e1e1f6","on-secondary-fixed":"#25005a","on-primary-fixed-variant":"#5c4200","on-surface-variant":"#d2c5b1","inverse-surface":"#e1e1f6","secondary-fixed-dim":"#d2bbff","on-error":"#690005","surface-bright":"#363849","secondary":"#d2bbff","primary-fixed":"#ffdea2","on-surface":"#e1e1f6","tertiary-fixed":"#dfe0ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","space-sm":"0.5rem","margin":"2rem","space-lg":"1.5rem","gutter-mobile":"0.75rem","space-xl":"2rem","gutter":"1.25rem","margin-mobile":"1rem","space-md":"1rem"},fontFamily:{"body-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},fontSize:{"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-xl-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.45)] border-b border-white/10"><div class="h-20 max-w-7xl mx-auto px-6 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-gradient-to-br from-secondary-container via-surface-container-high to-primary flex items-center justify-center shadow-[0_0_16px_rgba(92,3,203,0.35)]"><span class="font-headline-sm text-headline-sm font-bold text-primary">V</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">VELOOP</span></div><div class="hidden lg:flex items-center text-on-surface-variant font-label-md text-label-md"><span class="text-outline/40 mx-space-xs">/</span><span>Exchange Center</span></div></div><nav class="hidden xl:flex items-center gap-space-xs bg-surface-container-low/70 p-space-xs rounded-xl" data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-colors" data-path="dashboard" href="#">Dashboard</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-colors" data-path="rewards" href="#">Rewards</a><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-surface-container-high text-primary font-bold rounded-lg shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]" data-path="exchange-center" href="#">Exchange Center</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-colors" data-path="history" href="#">History</a><a class="px-space-md py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-colors" data-path="level-up" href="#">Level Up</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-full shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">diamond</span><span class="font-label-md text-label-md text-on-surface font-bold">420</span></div><div class="w-px h-3.5 bg-outline/30"></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">monetization_on</span><span class="font-label-md text-label-md text-primary font-bold">3,850</span><span class="font-label-sm text-label-sm text-on-surface-variant">VE</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative p-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><button aria-label="Help and FAQ" class="p-space-sm rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button></div><div class="flex items-center gap-space-sm pl-space-xs border-l border-white/10"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-none">Hasan</span><span class="font-label-sm text-label-sm text-secondary leading-none mt-1">Level 7</span></div></div></div></div></header><main class="w-full pt-20 bg-background"><div class="max-w-7xl mx-auto px-6 py-8 min-h-[calc(100vh-5rem)]"><div class="flex flex-col w-full text-on-surface">
+<!-- 1. SUB-HEADER / BREADCRUMB BAR -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-md">
+<a class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-headline-sm">arrow_back</span>
+<span class="font-label-lg text-label-lg">Back to Rewards</span>
+</a>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-lg text-headline-lg font-bold tracking-tight text-on-surface">Exchange Center</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/40 text-secondary text-label-sm font-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+          Vault Season 4
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1.5 px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" onclick="openModal('confirm')" type="button">
+<span class="material-symbols-outlined text-[18px]">help</span>
+        Exchange Rules &amp; FAQ
+      </button>
+<a class="flex items-center gap-1.5 px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+        Support
+      </a>
+</div>
+</div>
+<!-- INTERACTIVE DEV STATE CONTROLLER BAR -->
+<div class="mb-space-lg p-space-sm bg-surface-container-lowest rounded-xl flex flex-wrap items-center justify-between gap-space-sm shadow-md">
+<div class="flex items-center gap-2 px-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Live Preview States:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="state-btn active-state px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all bg-surface-container-high text-primary font-bold shadow-sm" id="btn-state-standard" onclick="setState('standard')" type="button">
+        Standard View
+      </button>
+<button class="state-btn px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" id="btn-state-modal" onclick="setState('modal')" type="button">
+        Confirm Modal
+      </button>
+<button class="state-btn px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" id="btn-state-success" onclick="setState('success')" type="button">
+        Success State
+      </button>
+<button class="state-btn px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" id="btn-state-insufficient" onclick="setState('insufficient')" type="button">
+        Insufficient Gems State
+      </button>
+</div>
+</div>
+<!-- INSUFFICIENT BALANCE INLINE ALERT (Shown when insufficient state active) -->
+<div class="hidden mb-space-lg p-space-md rounded-xl bg-error-container/20 text-on-error-container flex flex-col md:flex-row items-center justify-between gap-space-md shadow-lg animate-fadeIn" id="insufficient-alert-banner">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-error-container/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[28px]">warning</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-error">Insufficient Balance</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container/60 text-error font-label-sm text-label-sm">Requires 28 Gems</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Your current balance is <strong class="text-on-surface">12 Gems</strong>. You need <strong class="text-error">16 more Gems</strong> to execute the Daily Starter conversion bundle.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-lg py-space-sm rounded-lg bg-primary hover:bg-primary-fixed-dim text-on-primary font-label-lg text-label-lg font-bold shadow-md transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+        Earn More Gems
+      </button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant" onclick="setState('standard')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- 2. HERO SECTION: TURN YOUR GEMS INTO VES -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-space-lg lg:p-space-xl mb-space-xl shadow-xl">
+<!-- Ambient jewel nebulas -->
+<div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-secondary-container/25 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Content -->
+<div class="lg:col-span-6 flex flex-col space-y-space-md">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-surface-container-high text-secondary text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          VELOOP CONVERSION PORTAL ACTIVE
+        </div>
+<h1 class="font-headline-xl text-headline-xl font-bold tracking-tight text-on-surface">
+          Turn Your Gems <span class="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">into VEs</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Convert your earned platform Gems into official VELOOP Coins (VEs) and accelerate your reward journey. Experience immediate crediting, guaranteed rate locks, and zero transaction fees.
+        </p>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container/70 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[18px]">flash_on</span>
+            Instant Crediting
+          </div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container/70 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary text-[18px]">shield</span>
+            Guaranteed 1:1 Safety
+          </div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container/70 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]">trending_up</span>
+            Tier 7 Multiplier Active
+          </div>
+</div>
+</div>
+<!-- Right 3D Visual Stage Asset (Hero Showcase) -->
+<div class="lg:col-span-6 relative flex items-center justify-center min-h-[280px]">
+<div class="relative w-full max-w-lg flex items-center justify-center">
+<div class="absolute inset-0 bg-gradient-to-r from-secondary-container/20 to-primary-container/20 rounded-full blur-2xl transform scale-90"></div>
+<img alt="Luminous Gem to VE Coin portal transformation" class="relative z-10 w-full max-h-72 object-contain drop-shadow-[0_12px_36px_rgba(0,0,0,0.6)] transform hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA47kN9vaXVTQMUYqINI7m_MPg3PJGz1jkrhBcskiZww6Vdggeg6SQfHymzapkfrc9I757MtEn27g9WdOpoD8qgn-paKhGJCrV0fGrCIxUSIwHMPB7btpw5UeoY8c9wgBLa8GECM7o309MOoBDRzMJwRP0j6KPrea2nRs1Z_Lk_pV5B5IJ4AWtBQHGE0GuN4WuEaurx1DV5qLJG3bLlXPY_u75TdX6S2zcaAYqPTJphWv_GorhgE3Vvpg"/>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. CONNECTED BALANCE OVERVIEW DOCK -->
+<div class="mb-space-xl p-space-lg rounded-2xl bg-surface-container shadow-lg relative overflow-hidden">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-lg">
+<!-- Card A: Available Gems -->
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-low flex items-center justify-between group hover:bg-surface-container-high/60 transition-all">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-secondary-container/30 flex items-center justify-center text-secondary shadow-[0_0_24px_rgba(144,85,255,0.35)] shrink-0">
+<span class="material-symbols-outlined text-[32px]">diamond</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold uppercase tracking-wider">Available Gems</span>
+<span class="material-symbols-outlined text-outline text-[16px] cursor-help" title="Reward credits earned through eligible platform activities, daily streaks, and missions.">info</span>
+</div>
+<div class="font-headline-xl text-headline-xl font-bold text-on-surface leading-none mt-1">420</div>
+<span class="font-body-sm text-body-sm text-secondary">Ready for exchange</span>
+</div>
+</div>
+<button class="hidden sm:inline-flex items-center justify-center p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface" title="Gem History" type="button">
+<span class="material-symbols-outlined text-[20px]">history</span>
+</button>
+</div>
+<!-- Connector: Luminous Portal Pathway -->
+<div class="shrink-0 flex lg:flex-col items-center justify-center gap-2 py-2 lg:py-0 px-space-md">
+<div class="hidden lg:block w-px h-6 bg-gradient-to-b from-secondary to-primary opacity-40"></div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-highest shadow-inner">
+<span class="material-symbols-outlined text-secondary text-[16px]">sync_alt</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold text-primary">Exchange Portal</span>
+</div>
+<div class="hidden lg:block w-px h-6 bg-gradient-to-b from-primary to-secondary opacity-40"></div>
+</div>
+<!-- Card B: Available VEs -->
+<div class="flex-1 p-space-md rounded-xl bg-surface-container-low flex items-center justify-between group hover:bg-surface-container-high/60 transition-all">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-primary-container/25 flex items-center justify-center text-primary shadow-[0_0_24px_rgba(229,181,79,0.35)] shrink-0">
+<span class="material-symbols-outlined text-[32px]">monetization_on</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold uppercase tracking-wider">Available VEs</span>
+<span class="material-symbols-outlined text-outline text-[16px] cursor-help" title="VELOOP virtual reward currency redeemable in the Rewards Store for perks and prizes.">info</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-xl text-headline-xl font-bold text-primary leading-none">3,850</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-semibold">VE</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Vault purchasing power</span>
+</div>
+</div>
+<button class="hidden sm:inline-flex items-center justify-center p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface" title="Spend in store" type="button">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</button>
+</div>
+</div>
+<!-- Progress status line -->
+<div class="mt-space-md pt-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm bg-surface-container-lowest/60 rounded-xl px-space-md py-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-body-md text-body-md text-on-surface-variant">
+          Next tier milestone: Reach <strong class="text-on-surface">4,000 VEs</strong> for Gold Vault Status (+5% conversion boost)
+        </span>
+</div>
+<div class="w-full sm:w-48 flex items-center gap-2">
+<div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-primary rounded-full" style="width: 96.25%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">150 VE left</span>
+</div>
+</div>
+</div>
+<!-- 4. AVAILABLE CONVERSIONS (4 TIER CARDS GRID) -->
+<div class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Available Conversions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Select your preferred bundle to exchange platform gems for official VE coins.</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-3 py-1 rounded-full bg-surface-container">
+        Rates reset daily at 00:00 UTC
+      </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- TIER 1: Daily Starter -->
+<div class="group relative rounded-2xl bg-surface-container-low hover:bg-surface-container p-space-md flex flex-col justify-between shadow-md transition-all duration-300 hover:-translate-y-1">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/40 text-secondary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+              Popular
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tier 1</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Daily Gem Conversion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-space-md">
+            Convert your daily earned platform Gems into VEs instantly.
+          </p>
+<!-- Conversion Pathway Visual -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest/80 flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">diamond</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">28</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]">monetization_on</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">151 VE</span>
+</div>
+</div>
+</div>
+<button class="w-full py-space-sm rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-primary/20 transition-all flex items-center justify-center gap-2" onclick="openModal('confirm')" type="button">
+<span>Convert Rewards</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- TIER 2: Reward Booster -->
+<div class="group relative rounded-2xl bg-surface-container-low hover:bg-surface-container p-space-md flex flex-col justify-between shadow-md transition-all duration-300 hover:-translate-y-1">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container/30 text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+              Recommended
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tier 2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Reward Conversion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-space-md">
+            Higher conversion rate tailored for active weekly members.
+          </p>
+<!-- Conversion Pathway Visual -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest/80 flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">diamond</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">39</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]">monetization_on</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">168 VE</span>
+</div>
+</div>
+</div>
+<button class="w-full py-space-sm rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-primary/20 transition-all flex items-center justify-center gap-2" onclick="openModal('confirm')" type="button">
+<span>Convert Rewards</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- TIER 3: Value Pack -->
+<div class="group relative rounded-2xl bg-surface-container-low hover:bg-surface-container p-space-md flex flex-col justify-between shadow-md transition-all duration-300 hover:-translate-y-1">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/40 text-secondary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+              Value
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tier 3</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Value Conversion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-space-md">
+            Unlock greater value with larger platform Gem bundles.
+          </p>
+<!-- Conversion Pathway Visual -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest/80 flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">diamond</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">57</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]">monetization_on</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">255 VE</span>
+</div>
+</div>
+</div>
+<button class="w-full py-space-sm rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-primary/20 transition-all flex items-center justify-center gap-2" onclick="openModal('confirm')" type="button">
+<span>Convert Rewards</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- TIER 4: Premium Vault -->
+<div class="group relative rounded-2xl bg-surface-container-low hover:bg-surface-container p-space-md flex flex-col justify-between shadow-md transition-all duration-300 hover:-translate-y-1">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+              Best Rate
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tier 4</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Premium Conversion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-space-md">
+            Exclusive tier for maximum platform VE return.
+          </p>
+<!-- Conversion Pathway Visual -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest/80 flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">diamond</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">100</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]">monetization_on</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">455 VE</span>
+</div>
+</div>
+</div>
+<button class="w-full py-space-sm rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:shadow-primary/20 transition-all flex items-center justify-center gap-2" onclick="openModal('confirm')" type="button">
+<span>Convert Rewards</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<p class="mt-space-sm font-body-sm text-body-sm text-on-surface-variant/80">
+      * Illustrative example exchange rates. Final exchange values are locked at the time of conversion and backed by verified reward vault reserves.
+    </p>
+</div>
+<!-- 6. HOW IT WORKS (5 STEPS PROGRESSION) -->
+<div class="mb-space-xl p-space-lg rounded-2xl bg-surface-container-low shadow-lg">
+<div class="flex items-center justify-between mb-space-lg">
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">How Platform Exchange Works</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Seamless five-step sequence from rewarded mission to vault coins.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-space-md relative">
+<!-- Step 1 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm font-bold text-secondary">STEP 01</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">stars</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Earn Gems</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Complete daily tasks, login streaks, and seasonal quests.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm font-bold text-secondary">STEP 02</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">view_timeline</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Choose Bundle</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Select a conversion tier matching your current Gem balance.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm font-bold text-primary">STEP 03</span>
+<span class="material-symbols-outlined text-primary text-[20px]">lock_clock</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Review Rates</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Preview locked exchange values and balance changes.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm font-bold text-primary">STEP 04</span>
+<span class="material-symbols-outlined text-primary text-[20px]">touch_app</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Authorize</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Confirm with one click. Instant atomic wallet deduction.</p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm font-bold text-primary">STEP 05</span>
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Receive VEs</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">VE coins are credited immediately, ready for perks.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 7. LOWER SECTION: TWO-COLUMN LAYOUT -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left Column: Recent Conversions Table (7 cols) -->
+<div class="lg:col-span-7 p-space-lg rounded-2xl bg-surface-container shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Recent Conversions</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last 30 Days</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Row 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">28 Gems → 151 VEs</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">26 Aug 2026, 04:32 PM</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span> Completed
+              </span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">39 Gems → 168 VEs</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">25 Aug 2026, 11:15 AM</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span> Completed
+              </span>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">57 Gems → 255 VEs</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">23 Aug 2026, 06:40 PM</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check</span> Completed
+              </span>
+</div>
+</div>
+<!-- Row 4 (Processing) -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary animate-spin">
+<span class="material-symbols-outlined text-[18px]">autorenew</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">100 Gems → 455 VEs</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">21 Aug 2026, 02:10 PM</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm font-bold">
+                Processing
+              </span>
+</div>
+</div>
+<!-- Row 5 (Failed) -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-bold text-on-surface">28 Gems → 151 VEs</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">19 Aug 2026, 03:22 PM</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm font-bold">
+                Failed
+              </span>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">Retry</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex justify-end">
+<a class="font-label-md text-label-md text-primary hover:text-primary-fixed flex items-center gap-1" href="#">
+<span>View Full History</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right Column: Exchange Rules & Safeguards (5 cols) -->
+<div class="lg:col-span-5 p-space-lg rounded-2xl bg-surface-container-low shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">gavel</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Rules &amp; Safeguards</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm">
+            Audited Policy
+          </span>
+</div>
+<!-- Security Visual Shield Header -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-center gap-space-md mb-space-md">
+<img alt="Purple crystalline verification security shield" class="w-16 h-16 object-contain drop-shadow-md shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALXoyMWZJ-cjHnOexw-4ofC6j-VitscVisROg3YX8Ar2FZjjQoLyCZPfkGA8IuEVGSnwWVyYHKen9ZeEhhh4RUAU5lR2O5edtreOqHm1urLENdkT97C2JvA5aCkXo6jACTrAHxkYRzY4z56D1qVgjZ61Blp4DHh_G79HYQV55PDczscRcHkFz1aNiWH10Bur74qwspX4rnI2-YIHRzpir83Q7w0SGMShOQPCRRaNv8bTpqBe9NMl9oLw"/>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Vault Certified Conversions</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Protected by real-time platform ledger guarantees.</p>
+</div>
+</div>
+<ul class="space-y-space-sm">
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Predefined Platform Rates:</strong> Fixed reward multipliers based on your current membership tier level.
+            </span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Verified Platform Gems:</strong> Only reward credits earned from authenticated community milestones are exchangeable.
+            </span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Real-Time Atomic Sync:</strong> Immediate balance updates with zero delays, trading margins, or network gas fees.
+            </span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Permanent Ledger:</strong> Confirmed exchanges are safe, definitive, and immediately redeemable in the vault store.
+            </span>
+</li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-md">
+<a class="font-label-md text-label-md text-secondary hover:text-secondary-fixed flex items-center gap-1" href="#">
+<span>Read Platform Terms &amp; Reward Policy</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- MODAL OVERLAY: CONFIRMATION MODAL (Controlled by JS) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-md" id="modal-confirm">
+<div class="relative w-full max-w-lg rounded-2xl bg-surface-container p-space-xl shadow-2xl animate-scaleUp">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">published_with_changes</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Confirm Conversion</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Transaction Review</span>
+</div>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface-variant" onclick="closeModal('confirm')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Conversion Summary Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low mb-space-md space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Gems to Deduct</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary flex items-center gap-1">
+            -28 <span class="material-symbols-outlined text-[18px]">diamond</span>
+</span>
+</div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">VEs to Receive</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary flex items-center gap-1">
+            +151 <span class="material-symbols-outlined text-[18px]">monetization_on</span>
+</span>
+</div>
+<div class="pt-space-xs space-y-1">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Balance Before</span>
+<span>420 Gems  |  3,850 VEs</span>
+</div>
+<div class="flex items-center justify-between text-on-surface font-label-md text-label-md font-bold">
+<span>Balance After</span>
+<span class="text-primary">392 Gems  |  4,001 VEs</span>
+</div>
+</div>
+</div>
+<!-- Reassurance Note -->
+<div class="flex items-start gap-2 p-space-sm rounded-lg bg-surface-container-high text-on-surface-variant mb-space-lg">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">verified</span>
+<span class="font-body-sm text-body-sm">
+          Exchange rate locked for this session. Authorizing will deduct 28 Gems and instantly credit 151 VE coins to your rewards vault.
+        </span>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-space-sm">
+<button class="px-space-lg py-space-sm rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-lg text-label-lg transition-all" onclick="closeModal('confirm')" type="button">
+          Cancel
+        </button>
+<button class="px-space-xl py-space-sm rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-lg hover:shadow-primary/30 transition-all flex items-center gap-2" onclick="executeConversion()" type="button">
+<span>Authorize &amp; Exchange</span>
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MODAL OVERLAY: SUCCESS STATE MODAL (Controlled by JS) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-md" id="modal-success">
+<div class="relative w-full max-w-lg rounded-2xl bg-surface-container p-space-xl shadow-2xl text-center animate-scaleUp">
+<!-- Success Icon/Celebratory Chest Visual -->
+<div class="flex justify-center mb-space-md">
+<img alt="Gilded treasure chest overflowing with glowing purple gems and coins" class="w-48 h-32 object-contain drop-shadow-[0_8px_24px_rgba(229,181,79,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChr0i83G0uUZiSF1ykrQIh3cB5xaRVjUW1-PfiHeKL51eW-DMtnJmvKeArcJPm_UjjjBf4U-DyFn6cqwpcSY5hqdaNW-DkvhFwbrdC8qDLky8AoFkj3GR6zmKh57zMOt8-61pZHV7bXArpI5nwNtyz5NV053hj7QJc5VmxB8MqDUKRh0OnP7NloxwsI-jMw7wcA-BnN9nsW6uOO5KKHYDlg5aJF33VLP1l2xVaahhBEV19TvHRkl91CQ"/>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container/20 text-primary text-label-sm font-label-sm font-bold uppercase mb-2">
+<span class="material-symbols-outlined text-[14px]">task_alt</span>
+        Vault Credited
+      </div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">Conversion Complete</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1 mb-space-lg">
+        28 Gems converted • <strong class="text-primary">+151 VEs</strong> added to your vault
+      </p>
+<!-- Updated Balance Pill Box -->
+<div class="p-space-md rounded-xl bg-surface-container-low mb-space-md grid grid-cols-2 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">New Gem Balance</span>
+<div class="font-headline-md text-headline-md font-bold text-secondary mt-1">392</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">New VE Balance</span>
+<div class="font-headline-md text-headline-md font-bold text-primary mt-1">4,001 VE</div>
+</div>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">
+        Transaction Reference: <span class="font-mono text-on-surface font-semibold">#VEL-892401</span>
+</div>
+<div class="flex items-center justify-center gap-space-sm">
+<button class="w-full py-space-sm rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-lg text-label-lg transition-all" onclick="closeModal('success')" type="button">
+          View in History
+        </button>
+<button class="w-full py-space-sm rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-fixed transition-all" onclick="closeModal('success')" type="button">
+          Continue
+        </button>
+</div>
+</div>
+</div>
+<!-- INLINE VANILLA JAVASCRIPT FOR STATE TOGGLING -->
+<script>
+    function setState(state) {
+      // Clear active styling on dev state buttons
+      document.querySelectorAll('.state-btn').forEach(btn => {
+        btn.classList.remove('bg-surface-container-high', 'text-primary', 'font-bold', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant');
+      });
+
+      const activeBtn = document.getElementById('btn-state-' + state);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-surface-container-high', 'text-primary', 'font-bold', 'shadow-sm');
+        activeBtn.classList.remove('text-on-surface-variant');
+      }
+
+      // Hide all modals & alert banner by default
+      document.getElementById('modal-confirm').classList.add('hidden');
+      document.getElementById('modal-success').classList.add('hidden');
+      document.getElementById('insufficient-alert-banner').classList.add('hidden');
+
+      if (state === 'modal') {
+        document.getElementById('modal-confirm').classList.remove('hidden');
+      } else if (state === 'success') {
+        document.getElementById('modal-success').classList.remove('hidden');
+      } else if (state === 'insufficient') {
+        document.getElementById('insufficient-alert-banner').classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function openModal(type) {
+      if (type === 'confirm') {
+        setState('modal');
+      } else if (type === 'success') {
+        setState('success');
+      }
+    }
+
+    function closeModal(type) {
+      setState('standard');
+    }
+
+    function executeConversion() {
+      // Simulate quick flow to success
+      closeModal('confirm');
+      setTimeout(() => {
+        setState('success');
+      }, 150);
+    }
+  </script>
+</div></div></main><footer class="w-full bg-surface-container-lowest/80 border-t border-white/5 py-space-xl"><div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold text-xs">V</div><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 VELOOP Rewards Vault. All rights reserved.</span></div><div class="flex items-center gap-space-lg font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="#">Terms of Rewards</a><a class="hover:text-on-surface transition-colors" href="#">Security Vault</a><a class="hover:text-on-surface transition-colors" href="#">Support Concierge</a></div></div></footer></body></html>
